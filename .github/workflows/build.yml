@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ "main" ]
 
+# এই অংশটি নতুন পুশ আসলে আগের রানিং বিল্ডগুলোকে অটোমেটিক বাতিল করে দেবে
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
