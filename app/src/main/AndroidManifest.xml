@@ -5,10 +5,12 @@
 
     <application
         android:allowBackup="true"
-        android:label="Simple Keymapper" android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+        android:label="Simple Keymapper"
+        android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
 
         <service
-            android:name="com.gmr.simplekeymapper.MapperAccessibilityService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:name="com.gmr.simplekeymapper.MapperAccessibilityService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />
@@ -19,7 +21,8 @@
         </service>
 
         <activity 
-            android:name="com.gmr.simplekeymapper.MainActivity" android:exported="true">
+            android:name="com.gmr.simplekeymapper.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
